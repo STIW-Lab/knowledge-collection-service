@@ -18,6 +18,7 @@ def advice_like(text: str) -> bool:
     return bool(STEP_PAT.search(t))
 
 #Not implemented - should be discussed!!!
+# -- WILL MOVE TO HAVING LLM GENERATE ADVICE, VIA STEPS [PROVIDED WITH CONTEXT]
 def extract_steps(text: str) -> List[str]:
     # crude split by lines that look like bullet/numbered steps
     steps = []
@@ -56,7 +57,7 @@ def score_comment(score: int, num_replies: int, awards: int, length: int) -> flo
 def score_submission(score: int, num_comments: int, upvote_ratio: float) -> float:
     import math
     s = math.log1p(max(score, 0)) * 0.5
-    c = math.log1p(max(num_comments, 0)) * 0.3
+    c = math.log1p(max(num_comments, 0)) *  0.3
     u = (upvote_ratio or 0.5) * 0.2
     return s + c + u
 

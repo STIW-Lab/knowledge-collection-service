@@ -13,11 +13,7 @@
     ]
   },
   "Social Security (community & belonging)": {
-    "subreddits": [
-      "socialskills",
-      "relationship_advice",
-      "DecidingToBeBetter"
-    ],
+    "subreddits": ["socialskills", "relationship_advice", "DecidingToBeBetter"],
     "queries": [
       "make friends",
       "build community",
@@ -40,12 +36,7 @@
     ]
   },
   "Family and Caregiving": {
-    "subreddits": [
-      "family",
-      "relationship_advice",
-      "Parenting",
-      "caregiving"
-    ],
+    "subreddits": ["family", "relationship_advice", "Parenting", "caregiving"],
     "queries": [
       "reconnect with family",
       "care for parents",
@@ -54,12 +45,7 @@
     ]
   },
   "Physical Health": {
-    "subreddits": [
-      "fitness",
-      "loseit",
-      "nutrition",
-      "xxfitness"
-    ],
+    "subreddits": ["fitness", "loseit", "nutrition", "xxfitness"],
     "queries": [
       "get started with gym",
       "beginner workout",
@@ -83,11 +69,7 @@
     ]
   },
   "Supporting Loved Ones": {
-    "subreddits": [
-      "relationship_advice",
-      "Assistance",
-      "TrueOffMyChest"
-    ],
+    "subreddits": ["relationship_advice", "Assistance", "TrueOffMyChest"],
     "queries": [
       "how to support someone",
       "show up for",
