@@ -1,45 +1,15 @@
-# === Python / uv ===
+.env
 .venv/
 __pycache__/
 *.pyc
-*.pyo
-*.pyd
-*.egg-info/
-.cache/
-
-# === IDEs / Editors ===
-.vscode/
-.idea/
-
-# === Data storage ===
-data/
-outputs/
-logs/
-
-# If you want to version some subfolders under data,
-# you can un-ignore specific files like so:
-# !data/README.md
-
-# === Local runtime & debugging ===
-*.log
-*.tmp
-*.bak
-
-# === API Keys / Config ===
-.env
-.env.*
-secrets.json
-config.local.json
-*.key
-*.pem
-
-# === Crawl / NLP Outputs ===
-embeddings/
-pages_raw/
-chunks/
-scraped_html/
-parsed_content/
-
-# === OS / Misc ===
-.DS_Store
-Thumbs.db
+# datasets/exports
+reddit_dataset.jsonl
+reddit_dataset_pretty.json
+*.csv
+*.parquet
+*.tsv
+*.xlsx
+# misc caches
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/

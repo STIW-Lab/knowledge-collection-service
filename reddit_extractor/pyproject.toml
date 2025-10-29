@@ -1,0 +1,19 @@
+[project]
+name = "knowledge-collection-service"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "beautifulsoup4>=4.14.2",
+    "httpx>=0.28.1",
+    "loguru>=0.7.3",
+    "pandas>=2.3.3",
+    "pmaw>=3.0.0",
+<<<<<<< HEAD
+    "praw>=7.8.1",
+    "python-dotenv>=1.2.1",
+=======
+>>>>>>> 65e4ec9a8844239d357653cba7ae23565e37c2d2
+    "readability-lxml>=0.8.4.1",
+]
