@@ -1,0 +1,94 @@
+{
+  "Financial Security": {
+    "subreddits": [
+      "personalfinance",
+      "financialindependence",
+      "povertyfinance"
+    ],
+    "queries": [
+      "how to save money",
+      "manage finances",
+      "afford housing",
+      "transportation costs"
+    ]
+  },
+  "Social Security (community & belonging)": {
+    "subreddits": ["socialskills", "relationship_advice", "DecidingToBeBetter"],
+    "queries": [
+      "make friends",
+      "build community",
+      "feeling lonely",
+      "belonging"
+    ]
+  },
+  "Job Skills and Education": {
+    "subreddits": [
+      "cscareerquestions",
+      "careerguidance",
+      "learnprogramming",
+      "resumes"
+    ],
+    "queries": [
+      "what skills do I need",
+      "get a job",
+      "switch careers",
+      "how to learn X"
+    ]
+  },
+  "Family and Caregiving": {
+    "subreddits": ["family", "relationship_advice", "Parenting", "caregiving"],
+    "queries": [
+      "reconnect with family",
+      "care for parents",
+      "support spouse",
+      "support sibling"
+    ]
+  },
+  "Physical Health": {
+    "subreddits": ["fitness", "loseit", "nutrition", "xxfitness"],
+    "queries": [
+      "get started with gym",
+      "beginner workout",
+      "build healthy habits",
+      "diet plan"
+    ]
+  },
+  "Mental Health": {
+    "subreddits": [
+      "mentalhealth",
+      "GetDisciplined",
+      "DecidingToBeBetter",
+      "adhdwomen",
+      "Anxietyhelp"
+    ],
+    "queries": [
+      "feel calm",
+      "reduce anxiety",
+      "feel confident",
+      "cope with stress"
+    ]
+  },
+  "Supporting Loved Ones": {
+    "subreddits": ["relationship_advice", "Assistance", "TrueOffMyChest"],
+    "queries": [
+      "how to support someone",
+      "show up for",
+      "help my friend",
+      "help my partner"
+    ]
+  },
+  "Supporting others like me": {
+    "subreddits": [
+      "DecidingToBeBetter",
+      "selfimprovement",
+      "PeerSupport",
+      "socialskills"
+    ],
+    "queries": [
+      "peer support",
+      "help others like me",
+      "share my experience",
+      "leadership in community"
+    ]
+  }
+}
