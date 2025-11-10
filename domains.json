@@ -1,0 +1,193 @@
+[
+  {
+    "domain_id": null,
+    "domain_tag": "FS",
+    "domain_name": "Financial Security",
+    "subreddits": [
+      "personalfinance",
+      "financialindependence",
+      "povertyfinance",
+      "budget",
+      "Frugal",
+      "financialplanning",
+      "StudentLoans"
+    ],
+    "queries": [
+      "how to save money",
+      "manage finances",
+      "afford housing",
+      "transportation costs",
+      "budgeting tips",
+      "pay off debt",
+      "emergency fund"
+    ]
+  },
+  {
+    "domain_id": null,
+    "domain_tag": "SS",
+    "domain_name": "Social Security (community & belonging)",
+    "subreddits": [
+      "socialskills",
+      "relationship_advice",
+      "DecidingToBeBetter",
+      "FriendshipAdvice",
+      "KindVoice",
+      "selfimprovement",
+      "introvert",
+      "CasualConversation"
+    ],
+    "queries": [
+      "make friends",
+      "build community",
+      "feeling lonely",
+      "belonging",
+      "start a conversation",
+      "improve social skills",
+      "meet new people"
+    ]
+  },
+  {
+    "domain_id": null,
+    "domain_tag": "JSE",
+    "domain_name": "Job Skills and Education",
+    "subreddits": [
+      "cscareerquestions",
+      "careerguidance",
+      "learnprogramming",
+      "resumes",
+      "LinkedIn",
+      "GetEmployed",
+      "AskHR",
+      "coding"
+    ],
+    "queries": [
+      "what skills do I need",
+      "get a job",
+      "switch careers",
+      "how to learn X",
+      "resume review",
+      "interview prep",
+      "portfolio projects"
+    ]
+  },
+  {
+    "domain_id": null,
+    "domain_tag": "FAC",
+    "domain_name": "Family and Caregiving",
+    "subreddits": [
+      "family",
+      "relationship_advice",
+      "Parenting",
+      "caregiving",
+      "Mommit",
+      "TwoXChromosomes",
+      "AskParents",
+      "ElderCare"
+    ],
+    "queries": [
+      "reconnect with family",
+      "care for parents",
+      "support spouse",
+      "support sibling",
+      "set boundaries",
+      "caregiver burnout",
+      "co-parenting tips"
+    ]
+  },
+  {
+    "domain_id": null,
+    "domain_tag": "PH",
+    "domain_name": "Physical Health",
+    "subreddits": [
+      "fitness",
+      "loseit",
+      "nutrition",
+      "xxfitness",
+      "bodyweightfitness",
+      "running",
+      "EatCheapAndHealthy",
+      "progresspics"
+    ],
+    "queries": [
+      "get started with gym",
+      "beginner workout",
+      "build healthy habits",
+      "diet plan",
+      "weight loss basics",
+      "meal prep",
+      "form check"
+    ]
+  },
+  {
+    "domain_id": null,
+    "domain_tag": "MH",
+    "domain_name": "Mental Health",
+    "subreddits": [
+      "mentalhealth",
+      "GetDisciplined",
+      "DecidingToBeBetter",
+      "adhdwomen",
+      "Anxietyhelp",
+      "depression",
+      "Therapy",
+      "ADHD"
+    ],
+    "queries": [
+      "feel calm",
+      "reduce anxiety",
+      "feel confident",
+      "cope with stress",
+      "find a therapist",
+      "build discipline",
+      "ADHD routines"
+    ]
+  },
+  {
+    "domain_id": null,
+    "domain_tag": "SL",
+    "domain_name": "Supporting Loved Ones",
+    "subreddits": [
+      "relationship_advice",
+      "Assistance",
+      "TrueOffMyChest",
+      "caregiving",
+      "offmychest",
+      "KindVoice",
+      "Anxietyhelp",
+      "depression"
+    ],
+    "queries": [
+      "how to support someone",
+      "show up for",
+      "help my friend",
+      "help my partner",
+      "what to say",
+      "active listening",
+      "support through crisis"
+    ]
+  },
+  {
+    "domain_id": null,
+    "domain_tag": "SO",
+    "domain_name": "Supporting others like me",
+    "subreddits": [
+      "DecidingToBeBetter",
+      "selfimprovement",
+      "PeerSupport",
+      "socialskills",
+      "GetMotivated",
+      "ADHD",
+      "selfhelp",
+      "KindVoice"
+    ],
+    "queries": [
+      "peer support",
+      "help others like me",
+      "share my experience",
+      "leadership in community",
+      "mentor others",
+      "start a support group",
+      "community volunteering"
+    ]
+  }
+]

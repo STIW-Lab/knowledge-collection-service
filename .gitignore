@@ -1,0 +1,15 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+# datasets/exports
+reddit_dataset.jsonl
+reddit_dataset_pretty.json
+*.csv
+*.parquet
+*.tsv
+*.xlsx
+# misc caches
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
