@@ -271,6 +271,3 @@ class QueryPipeline:
                 "status": "empty",
                 "message": "Steps extraction failed — maybe comments didn’t contain actionable steps."
             }
-
-
-
