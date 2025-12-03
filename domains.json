@@ -1,5 +1,6 @@
 {
   "Financial Security": {
+    "domain_tag": "FS",
     "subreddits": [
       "personalfinance",
       "financialindependence",
@@ -12,7 +13,9 @@
       "transportation costs"
     ]
   },
+
   "Social Security (community & belonging)": {
+    "domain_tag": "SS",
     "subreddits": ["socialskills", "relationship_advice", "DecidingToBeBetter"],
     "queries": [
       "make friends",
@@ -21,7 +24,9 @@
       "belonging"
     ]
   },
+
   "Job Skills and Education": {
+    "domain_tag": "JSE",
     "subreddits": [
       "cscareerquestions",
       "careerguidance",
@@ -35,7 +40,9 @@
       "how to learn X"
     ]
   },
+
   "Family and Caregiving": {
+    "domain_tag": "FAC",
     "subreddits": ["family", "relationship_advice", "Parenting", "caregiving"],
     "queries": [
       "reconnect with family",
@@ -44,7 +51,9 @@
       "support sibling"
     ]
   },
+
   "Physical Health": {
+    "domain_tag": "PH",
     "subreddits": ["fitness", "loseit", "nutrition", "xxfitness"],
     "queries": [
       "get started with gym",
@@ -53,7 +62,9 @@
       "diet plan"
     ]
   },
+
   "Mental Health": {
+    "domain_tag": "MH",
     "subreddits": [
       "mentalhealth",
       "GetDisciplined",
@@ -68,7 +79,9 @@
       "cope with stress"
     ]
   },
+
   "Supporting Loved Ones": {
+    "domain_tag": "SLO",
     "subreddits": ["relationship_advice", "Assistance", "TrueOffMyChest"],
     "queries": [
       "how to support someone",
@@ -77,7 +90,9 @@
       "help my partner"
     ]
   },
+
   "Supporting others like me": {
+    "domain_tag": "SOLM",
     "subreddits": [
       "DecidingToBeBetter",
       "selfimprovement",
