@@ -186,6 +186,91 @@ class QueryPipeline:
         
         # Ready for LLM chain call
         return context_map
+    
+    def generate_actionable_steps(self, user_story: str, user_current_steps: str):
+        """
+        Full actionable steps pipeline
+        """
+
+        # Genenate hyde_post + embeddings, with domains
+        HyDE_emb, domains = self.__generate_HyDE_emb(
+        user_story=user_story,
+        user_current_steps=user_current_steps
+        )
+
+        # Retreive top relevant submissions
+        top_subs = self.__run_submission_document_retrieval(
+            HyDE_emb=HyDE_emb,
+            domains=domains
+        )
+
+        if not top_subs:
+            return {
+                "status": "no_matches",
+                "message": "No relevant submissions found under the confidence threshold, ***RUN WEBAPI PIPELINE***"
+            }
+
+        # Retreive comments to relevant top subs to create context map
+        context_map = self.__run_comment_document_retreival(
+            HyDE_emb=HyDE_emb,
+            top_subs_filtered=top_subs,
+        )
+
+        all_steps = []  # will hold dict: {step, emb, submission_id, url, score}
+        # Actionable step extraction per comment for LLM chain
+        for sub_id, sub_data in context_map.items():
+            print(f"Deriving Actionable steps for Submission -> {sub_data['title']}[{sub_data[sub_id]}]")
+
+            action_step_prompt = """
+                You will be given a single Reddit comment.
+                Extract ONLY clear actionable steps expressed or strongly implied.
+                Do NOT add new ideas. Do NOT give advice. Do NOT restate context.
+                Return JSON exactly as: {"steps": ["...", "..."]}
+
+                COMMENT:
+            """
+            # Generating an action step for each comment
+            for c in sub_data['comments']:
+                comment_body = c["body"]
+                score = c["score"]
+
+                # LLM: Extract steps
+                resp = self.llm_client.chat.completions.create(
+                    model=self.llm_model_name,
+                    messages=[
+                        {"role": "system", "content": "Extract only actionable, literal steps."},
+                        {"role": "user", "content": action_step_prompt + comment_body}
+                    ],
+                    temperature=0.2, # Follow a lil bit more strict
+                    max_tokens=120 # Nothing too crazy of a step
+                )
+
+                try:
+                    parsed = json.loads(resp.choices[0].message.content)
+                    steps = parsed.get("steps", [])
+                except:
+                    steps = []
+                
+                # For each extracted step → embed immediately
+                for step_text in steps:
+                    emb = self.llm_client.embeddings.create(
+                        model="text-embedding-3-small",
+                        input=step_text
+                    ).data[0].embedding
+
+                    all_steps.append({
+                        "step": step_text,
+                        "embedding": emb,
+                        "submission_id": sub_id,
+                        "permalink": sub_data['permalink'],
+                        "score": score
+                    })
             
+        if not all_steps:
+            return {
+                "status": "empty",
+                "message": "Steps extraction failed — maybe comments didn’t contain actionable steps."
+            }
+
 
 
