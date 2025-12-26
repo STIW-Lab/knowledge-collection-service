@@ -556,6 +556,8 @@ dependencies = [
     { name = "psycopg2-binary" },
     { name = "readability-lxml" },
     { name = "sentence-transformers" },
+    { name = "torch" },
+    { name = "transformers" },
     { name = "umap-learn" },
 ]
 
@@ -572,6 +574,8 @@ requires-dist = [
     { name = "psycopg2-binary", specifier = ">=2.9.11" },
     { name = "readability-lxml", specifier = ">=0.8.4.1" },
     { name = "sentence-transformers", specifier = ">=5.1.2" },
+    { name = "torch", specifier = ">=2.9.1" },
+    { name = "transformers", specifier = ">=4.57.1" },
     { name = "umap-learn", specifier = ">=0.5.9.post2" },
 ]
 
