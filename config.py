@@ -12,13 +12,13 @@ REDDIT_USER_AGENT = os.getenv("REDDIT_USER_AGENT") or "knowledge-collection-serv
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 # --- connect to Postgres ---
-conn = psycopg2.connect(
-    host="localhost",
-    port=5432,
-    dbname="knowledgebase",
-    user="stiw_user",
-    password="stiw_pwd"
-)
-cursor = conn.cursor()
-print("✅ Connected to Postgres and OpenAI")
+# conn = psycopg2.connect(
+#     host="localhost",
+#     port=5432,
+#     dbname="knowledgebase",
+#     user="stiw_user",
+#     password="stiw_pwd"
+# )
+# cursor = conn.cursor()
+# print("✅ Connected to Postgres and OpenAI")
 
