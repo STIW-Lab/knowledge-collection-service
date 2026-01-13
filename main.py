@@ -1,6 +1,9 @@
 import json
 from loguru import logger
 from config import cursor, client, conn
+from services.classify import Classify
+
+classifier = Classify()
 
 def run_kb(user_input: str):
     # Embed query
@@ -115,8 +118,19 @@ def run_kb(user_input: str):
 
 def main():
     print("Hi")
-    user_input = input("Enter your query or goal: ").strip()
-    run_kb(user_input=user_input)
+    # user_input = input("Enter your query or goal: ").strip()
+    # run_kb(user_input=user_input)
 
+    # Test Pred
+    sample_comments = [
+        "This advice actually worked for me, highly recommend!",
+        "Don't follow this, it didn't help at all.",
+        "I tried it and it was okay, maybe try something else."
+    ]
+
+    results = classifier.predict(sample_comments)
+    for result in results:
+        print(result)
+        
 if __name__ == '__main__':
     main()

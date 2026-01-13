@@ -1,3 +1,6 @@
+import os
+os.environ["TORCH_USE_CUDA"] = "0"
+
 import torch
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 
@@ -10,18 +13,18 @@ class Classify:
             cls.__instance = super(Classify, cls).__new__(cls)
             cls.__instance.tokenizer = AutoTokenizer.from_pretrained(model_name)
             
-            # Initial Roberta Sentiment model  to inference mode
+            # Initial Roberta Sentiment model to inference mode
             cls.__instance.model = AutoModelForSequenceClassification.from_pretrained(model_name)
             cls.__instance.model.eval()
-            cls.__instance.labels = ['negative', 'neurtal', 'positive']
+            cls.__instance.labels = ['negative', 'neutral', 'positive']  # Fixed typo
 
         # Return class each time
         return cls.__instance
     
     # Prediction method
-    def predict(self, texts, max_length):
+    def predict(self, texts, max_length=512):  # Added default value
         try:
-            # Transfrom text for model compatible input
+            # Transform text for model compatible input
             input_tokens = self.tokenizer(
                 texts,
                 padding=True,
@@ -36,21 +39,21 @@ class Classify:
                 outputs = self.model(**input_tokens)
             
             # Convert outputs to labels for texts
-            # --> Normalize, softmax
-            output_probabilites = torch.softmax(outputs, dim=1)
+            # --> Normalize, softmax (use outputs.logits)
+            output_probabilities = torch.softmax(outputs.logits, dim=1)
             # --> Get argmax off probabilities
-            output_predictions = torch.argmax(output_probabilites, dim=1)
+            output_predictions = torch.argmax(output_probabilities, dim=1)
 
             # Get classification results
             results = []
-            for text, pred_id, prob_row in zip(texts, output_predictions, output_probabilites):
+            for text, pred_id, prob_row in zip(texts, output_predictions, output_probabilities):
                 results.append({
-                    "text" : text,
-                    "lable": self.label[pred_id],
+                    "text": text,
+                    "label": self.labels[pred_id],  # Fixed typo
                     "confidence": prob_row[pred_id].item()
                 })
             
             return results
         except Exception as e:
-            print(f"Error while classifying texts", e)
+            print(f"Error while classifying texts: {e}")
             return []
