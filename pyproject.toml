@@ -16,7 +16,6 @@ dependencies = [
     "psycopg2-binary>=2.9.11",
     "readability-lxml>=0.8.4.1",
     "sentence-transformers>=5.1.2",
-    "torch",
     "transformers>=4.57.1",
     "umap-learn>=0.5.9.post2",
     "asyncpg>=0.31.0",

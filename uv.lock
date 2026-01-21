@@ -585,7 +585,6 @@ dependencies = [
     { name = "python-dotenv" },
     { name = "readability-lxml" },
     { name = "sentence-transformers" },
-    { name = "torch" },
     { name = "transformers" },
     { name = "umap-learn" },
 ]
@@ -604,7 +603,6 @@ requires-dist = [
     { name = "python-dotenv", specifier = ">=1.0.0" },
     { name = "readability-lxml", specifier = ">=0.8.4.1" },
     { name = "sentence-transformers", specifier = ">=5.1.2" },
-    { name = "torch" },
     { name = "transformers", specifier = ">=4.57.1" },
     { name = "umap-learn", specifier = ">=0.5.9.post2" },
 ]
