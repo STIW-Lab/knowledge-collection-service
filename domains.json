@@ -16,7 +16,7 @@
 
   "Social Security (community & belonging)": {
     "domain_tag": "SS",
-    "subreddits": ["socialskills", "relationship_advice", "DecidingToBeBetter"],
+    "subreddits": ["socialskills", "relationship_advice", "DecidingToBeBetter", "socialanxiety"],
     "queries": [
       "make friends",
       "build community",
@@ -31,7 +31,10 @@
       "cscareerquestions",
       "careerguidance",
       "learnprogramming",
-      "resumes"
+      "resumes",
+      "skilledtrades",
+      "bluecollar",
+      "trucking"
     ],
     "queries": [
       "what skills do I need",
@@ -104,6 +107,25 @@
       "help others like me",
       "share my experience",
       "leadership in community"
+    ]
+  },
+
+  "Re-entry & Life After Incarceration": {
+    "domain_tag": "REI",
+    "subreddits": [
+      "excons",
+      "felons",
+      "jobs4felons",
+      "reentry"
+    ],
+    "queries": [
+      "explain background check",
+      "jobs for felons",
+      "housing with a record",
+      "rebuilding life after prison",
+      "parole advice",
+      "expungement process",
+      "ban the box laws"
     ]
   }
 }
