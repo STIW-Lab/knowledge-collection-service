@@ -84,22 +84,28 @@ async def health_check():
 
 async def event_generator(request: RagRequest) -> AsyncGenerator[str, None]:
     """Generate SSE events from pipeline stages."""
+    print(f"[API] Starting pipeline: adaptive_search={request.adaptive_search}")
+    
     async for stage_data in pipeline.run_pipeline(
         user_story=request.user_story,
         current_steps=request.current_steps,
         query=request.query,
         max_submissions=request.max_submissions,
         max_comments=request.max_comments,
-        distance_threshold=request.distance_threshold
+        distance_threshold=request.distance_threshold,
+        adaptive_search=request.adaptive_search
     ):
         # Format as SSE event
         event_type = "stage" if stage_data.get("stage") != "error" else "error"
         data_json = json.dumps(stage_data, cls=CustomJSONEncoder)
         
+        print(f"[API] Emitting stage: {stage_data.get('stage')}")
+        
         yield f"event: {event_type}\n"
         yield f"data: {data_json}\n\n"
     
     # Send done event
+    print("[API] Pipeline complete")
     yield "event: done\n"
     yield "data: {}\n\n"
 
@@ -112,6 +118,10 @@ async def rag_stream(request: RagRequest):
     Emits events:
     - stage: hyde - HyDE generation complete
     - stage: submissions - Submissions retrieved
+    - stage: adaptive_subreddits - (if adaptive) LLM suggested subreddits
+    - stage: adaptive_fetch - (if adaptive) Reddit posts fetched
+    - stage: adaptive_persist - (if adaptive) Data persisted to KB
+    - stage: submissions_updated - (if adaptive) Updated submissions after adaptive search
     - stage: comments - Comments retrieved
     - stage: steps - Steps extracted
     - stage: ranking - Clusters ranked

@@ -11,6 +11,7 @@ class RagRequest(BaseModel):
     max_submissions: int = 15
     max_comments: int = 20
     distance_threshold: float = 0.45
+    adaptive_search: bool = False
 
 
 class HyDEResult(TypedDict):
